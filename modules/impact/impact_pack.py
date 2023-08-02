@@ -877,7 +877,7 @@ class LatentPixelScale:
         if upscale_model_opt is None:
             latent = core.latent_upscale_on_pixel_space(samples, scale_method, scale_factor, vae, use_tile=use_tiled_vae)
         else:
-            latent = core.latent_upscale_on_pixel_space_with_model(samples, scale_method, upscale_model_opt, scale_factor, vae, use_tile=use_tile)
+            latent = core.latent_upscale_on_pixel_space_with_model(samples, scale_method, upscale_model_opt, scale_factor, vae, use_tile=use_tiled_vae)
         return (latent,)
 
 
